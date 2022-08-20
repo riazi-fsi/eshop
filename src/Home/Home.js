@@ -10,7 +10,13 @@ function Home() {
             <div className="home__container">
                 <img className="home__image" src={imgEcc} />
                 <div className="home__row">
-                    <Product/>
+                    <Product
+                    id='123'
+                     title='bag'
+                    price={11.96}
+                    rating={5}
+                    image={imgEcc}
+                     />
                     <Product/>
 
 
