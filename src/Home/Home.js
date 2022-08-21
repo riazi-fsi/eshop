@@ -1,11 +1,16 @@
 import React from 'react';
 import imgEcc from '../assets/ecomm.jpg'
+import Header from '../Header/Header';
 import Product from '../Product/Product';
 import './Home.css'
 
 function Home() {
   return (
+   
+
     <div>
+     <Header/>
+
         <div className="home">
             <div className="home__container">
                 <img className="home__image" src={imgEcc} />
