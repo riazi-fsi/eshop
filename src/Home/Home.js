@@ -2,7 +2,6 @@ import React from 'react';
 import imgEcc from '../assets/ecomm.jpg'
 import Header from '../Header/Header';
 import Product from '../Product/Product';
-import './Home.css'
 
 function Home() {
   return (
@@ -11,10 +10,10 @@ function Home() {
     <div>
      <Header/>
 
-        <div className="home">
-            <div className="home__container">
-                <img className="home__image" src={imgEcc} />
-                <div className="home__row">
+        <div className="flex items-center m-auto ">
+            <div>
+                <img className="w-full h-[400px] mb-[-50px] " src={imgEcc} />
+                <div className="flex m-2">
                     <Product
                     id='123'
                      title='bag'
@@ -30,7 +29,7 @@ function Home() {
 
 
                 </div>
-                <div className="home__row">
+                <div className="flex m-2">
                 <Product  id='4'
                      title='bag2'
                     price={11.96}
@@ -41,11 +40,7 @@ function Home() {
                     price={12.96}
                     rating={5}
                     image={imgEcc}/>
-                <Product/>
-
-                </div>
-                <div className="home__row">
-                <Product/>
+               
 
                 </div>
 
