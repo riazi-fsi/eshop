@@ -1,5 +1,4 @@
 import React from 'react';
-import './Header.css';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import StoreFrontIcon from '@material-ui/icons/Storefront';
 import SearchIcon from '@material-ui/icons/Search';
@@ -12,14 +11,14 @@ export default function Header() {
     return (
         <div className='flex items-center bg-slate-900 h-12 sticky z-50 top-0'>
             <Link to="/" style={{ textDecoration: 'none' }}>
-                <div className='header__logo'>
-                    <StoreFrontIcon className='header__logoImage' fontSize='large' />
-                    <h2 className="header__logoTitle">eshop</h2>
+                <div className=' flex items-center text-orange-400'>
+                    <StoreFrontIcon className=' mx-2 my-0 text-orange-400 flex items-center' fontSize='large' />
+                    <h2 className="text-white border-none decoration-0">eshop</h2>
                 </div>
             </Link>
             <div className=' flex flex-1 items-center mx-8 '>
-                <input type="text" className='header__serachInput' />
-                <SearchIcon className='header__searchIcon' />
+                <input type="text" className=' h-3 p-3 bottom-0 w-full' />
+                <SearchIcon className=' p-1 h-2 bg-yellow-400' />
             </div>
             <div className="flex content-evenly ">
                 <div className=" flex flex-col mx-4 text-white">

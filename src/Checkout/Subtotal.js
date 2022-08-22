@@ -9,7 +9,7 @@ function Subtotal() {
 
 
     return (
-        <div className='bg-gray-200 p-3 h-34 w-64 border-gray-400 border '>
+        <div className='bg-gray-200 p-3 h-28 w-64 border-gray-400 border '>
 
             <CurrencyFormat
                 renderText={(value) => (
