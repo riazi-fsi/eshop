@@ -7,21 +7,15 @@ import { useStateValue } from '../StateProvider';
 
 export default function Checkout() {
   const [{ basket }, dispatch] = useStateValue();
+
+
   return (
     <Fragment>
       <Header />
       <div className='flex '>
         <div className="flex flex-col w-1/2">
           <h2 className="font-bold m-3 border-b-2 "> Your Shopping Basket</h2>
-          {/* <CheckoutProduct
-            id='123'
-            title='bag'
-            price={11.96}
-            rating={5}
-            image={imgEcc}
-
-          /> */}
-          {basket.map(item => {
+          {basket.map(item => (
             <CheckoutProduct
               id={item.id}
               title={item.title}
@@ -31,7 +25,7 @@ export default function Checkout() {
 
 
             />
-          })}
+          ))}
 
         </div>
         <div className="flex w-1/2 justify-center mt-3">
