@@ -4,14 +4,18 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import StoreFrontIcon from '@material-ui/icons/Storefront';
 import SearchIcon from '@material-ui/icons/Search';
 import { Link } from 'react-router-dom';
+import { useStateValue } from '../StateProvider'
+    ;
 export default function Header() {
+    const [{ basket }, dispatch] = useStateValue();
+
     return (
         <div className='header'>
             <Link to="/" style={{ textDecoration: 'none' }}>
-            <div className='header__logo'>
-                <StoreFrontIcon className='header__logoImage' fontSize='large' />
-                <h2 className="header__logoTitle">eshop</h2>
-            </div>
+                <div className='header__logo'>
+                    <StoreFrontIcon className='header__logoImage' fontSize='large' />
+                    <h2 className="header__logoTitle">eshop</h2>
+                </div>
             </Link>
             <div className='header__search'>
                 <input type="text" className='header__serachInput' />
@@ -30,7 +34,7 @@ export default function Header() {
                 <Link to="/checkout" style={{ textDecoration: 'none' }}>
                     <div className='nav__itemBasket'>
                         <ShoppingBasketIcon fontSize='large' />
-                        <span className="nav__itemLineTwo nav__basketCount">0</span>
+                        <span className="nav__itemLineTwo nav__basketCount">{basket.length}</span>
                     </div>
                 </Link>
 

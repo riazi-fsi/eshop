@@ -22,13 +22,25 @@ function Home() {
                     rating={5}
                     image={imgEcc}
                      />
-                    <Product/>
+                    <Product  id='45'
+                     title='bag'
+                    price={13.96}
+                    rating={2}
+                    image={imgEcc}/>
 
 
                 </div>
                 <div className="home__row">
-                <Product/>
-                <Product/>
+                <Product  id='4'
+                     title='bag2'
+                    price={11.96}
+                    rating={5}
+                    image={imgEcc}/>
+                <Product  id='5'
+                     title='bag3'
+                    price={12.96}
+                    rating={5}
+                    image={imgEcc}/>
                 <Product/>
 
                 </div>
