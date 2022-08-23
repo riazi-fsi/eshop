@@ -18,10 +18,10 @@ function Product({ title, image, id, price, rating }) {
     });
   };
   return (
-    <div className=" flex flex-col items-center m-2 p-3 w-full bg-white justify-end">
+    <div className=" flex flex-col items-center m-2 p-2 w-[300px] bg-white ">
       <div className="mb-3 h-14">
-        <p>{title}</p>
-        <p className="mt-2">
+        <p className='text-center text-lg text-blue-800 font-bold'>{title}</p>
+        <p className="mt-1 text-center">
           <small>$</small>
           <strong>{price}</strong>
         </p>
@@ -39,8 +39,8 @@ function Product({ title, image, id, price, rating }) {
       </div>
       <br></br>
 
-      <img src={image} alt={title}></img>
-      <button className='bg-amber-600 p-2 text-white rounded text-sm mt-3 ' onClick={addToBasket} >add to basket</button>
+      <img src={image} alt={title} className='h-[200px] w-[250px]'></img>
+      <button className='bg-amber-600 p-2 text-black rounded text-sm mt-3 ' onClick={addToBasket} >add to basket</button>
     </div>
   )
 }

@@ -1,53 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import imgEcc from '../assets/ecomm.jpg'
 import Header from '../Header/Header';
 import Product from '../Product/Product';
+import { dataShop } from './data'
+import { useEffect } from 'react';
 
 function Home() {
-  return (
-   
 
-    <div>
-     <Header/>
-
-        <div className="flex items-center m-auto ">
-            <div>
-                <img className="w-full h-[400px] mb-[-50px] " src={imgEcc} />
-                <div className="flex m-2">
-                    <Product
-                    id='123'
-                     title='bag'
-                    price={11.96}
-                    rating={5}
-                    image={imgEcc}
-                     />
-                    <Product  id='45'
-                     title='bag'
-                    price={13.96}
-                    rating={2}
-                    image={imgEcc}/>
+    return (
 
 
-                </div>
-                <div className="flex m-2">
-                <Product  id='4'
-                     title='bag2'
-                    price={11.96}
-                    rating={5}
-                    image={imgEcc}/>
-                <Product  id='5'
-                     title='bag3'
-                    price={12.96}
-                    rating={5}
-                    image={imgEcc}/>
-               
+        <div>
+            <Header />
+
+            <div className="items-center m-auto ">
+              
+                    <img className="w-full h-[400px] mb-[-50px] " src={imgEcc} />
+                    <div className="flex m-2 justify-evenly flex-wrap">
+                        {dataShop.map((item, i) => (
+                            <Product
+                                id={item.id}
+                                title={item.title}
+                                price={item.price}
+                                rating={item.rating}
+                                image={item.img}
+                            />
+                        ) )}
+
+                  
+
 
                 </div>
-
             </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Home
