@@ -12,7 +12,7 @@ function CheckoutProduct({image,title,price,rating,id}) {
     }
     return (
         <div className="md:flex   p-8 bg-white mt-2 ml-2 ">
-            <img src={image} alt={title} className='w-20 h-20 md:h-full md:w-48 m-auto md:m-0 ' />
+            <img src={image} alt={title} className='w-20 h-20 md:h-[100px] md:w-[150px] m-auto md:m-0 ' />
             <div className="pt-2 md:p-3 text-center md:text-left ">
                 <p className='font-bold'>{title}</p>
                 <p >
